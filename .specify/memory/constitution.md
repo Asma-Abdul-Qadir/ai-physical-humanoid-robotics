@@ -1,55 +1,53 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 1.0.0 → 1.0.0 (initial constitution)
+- Added sections: Core Principles (6), Technical Standards, Development Workflow, Governance
+- Templates requiring updates: N/A (initial creation)
+- Follow-up TODOs: None
+-->
+# AI/Spec-Driven Book — Physical AI & Humanoid Robotics Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Technical Accuracy and Educational Clarity
+All robotics and AI concepts must be technically correct and current. Content must be clear and accessible for students and developers entering Physical AI, with step-by-step, hands-on educational structure that prioritizes understanding over complexity.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Spec-Driven Development Excellence
+Use Spec-Kit Plus and Claude Code as the primary authoring system for all content creation. Every chapter must begin with a specification that defines objectives, provides working examples (code, configs, or workflows), and includes a final exercise to reinforce learning.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Ethical Responsibility and Safety First
+All content must emphasize ethical considerations, safety protocols, and responsible AI practices. When covering robotics implementations, safety notes and failure modes must be explicitly addressed to ensure responsible development practices.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Industry-Standard Implementation Patterns
+ROS 2, Gazebo, Unity, and NVIDIA Isaac examples must be realistic and follow industry-grade patterns for voice, vision, and action pipelines. All technical implementations must reflect current best practices in robotics and AI engineering.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Modular and Accessible Content Structure
+Chapters must be modular and short for spec-driven generation, with clean, structured, and beginner-friendly writing. Content must be fully compatible with Docusaurus Markdown format and include alt+text for all images/figures.
 
-### [PRINCIPLE_6_NAME]
+### Originality and Quality Assurance
+Maintain 0% plagiarism tolerance with only original content. Every technical module must include inputs, outputs, architectures, codes, failure modes, and safety notes to ensure comprehensive coverage of topics.
 
+## Technical Standards
 
-[PRINCIPLE__DESCRIPTION]
+- Output format: Markdown (.md / .mdx) compatible with Docusaurus
+- Deployment: GitHub Pages using Docusaurus
+- Technology stack: ROS 2, Gazebo, Unity, NVIDIA Isaac for robotics examples
+- Code examples: Follow industry-grade patterns for voice, vision, and action pipelines
+- Images/figures: Must include alt+text for accessibility
+- Navigation: Ensure no broken links or missing navigation elements
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Development Workflow
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Each chapter begins with specification defining clear objectives
+- Provide working examples including code, configurations, or workflows
+- Include final exercise for each chapter to reinforce learning
+- Every technical module includes: inputs, outputs, architectures, codes, failure modes, safety notes
+- Use Spec-Kit Plus + Claude Code as the primary authoring system
+- Validate content against Docusaurus build requirements
+- Test rendering on GitHub Pages environment
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other development practices and standards within the project. All content creation, modifications, and reviews must verify compliance with these principles. Any deviation from these principles requires explicit justification and approval. Complexity must be justified with clear educational value. Use this constitution as the primary guidance document for all development decisions.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-09 | **Last Amended**: 2025-12-09
