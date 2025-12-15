@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where.exe powershell)",
+      "SlashCommand(/sp.implement --tasks T001-T063 --stop-after T063 --preview-localhost)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

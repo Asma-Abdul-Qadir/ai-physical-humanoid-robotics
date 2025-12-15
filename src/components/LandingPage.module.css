@@ -1,0 +1,187 @@
+/* ================= HERO BANNER ================= */
+.heroBanner {
+  padding: 4rem 0;
+  min-height: 100vh;
+  background: #1f0202dc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+}
+
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ================= HERO LAYOUT ================= */
+.heroSection {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.heroContent {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.textContent {
+  flex: 1;
+  max-width: 60%;
+}
+
+/* ================= TEXT GLOW ================= */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 15px #ff0000,
+    0 0 30px #ff0000;
+  animation: textGlow 2s infinite alternate;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+}
+
+/* ================= BUTTON ================= */
+.buttons {
+  display: flex;
+}
+
+.getStartedButton {
+  background: rgba(192, 71, 71, 0.719);
+  border-radius: 8px;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid rgba(235, 225, 225, 0.555);
+  backdrop-filter: blur(4px);
+  box-shadow:
+    0 0 10px rgba(255, 0, 0, 0.3),
+    0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.getStartedButton:hover {
+  background: rgba(255, 0, 0, 0.2);
+  box-shadow:
+    0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+/* ================= IMAGE ================= */
+.robotImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.robotImageContent {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow:
+    0 0 20px rgba(255, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.robotImageContent:hover {
+  transform: scale(1.03);
+}
+
+/* ================= MODULES ================= */
+.modulesSection {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.modulesTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+.modulesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* IMPORTANT: Link styled as full card */
+.moduleCard {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(10, 10, 10, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 0 15px rgba(255, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.moduleCard:hover {
+  background: rgba(255, 0, 0, 0.2);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 0 30px rgba(255, 0, 0, 0.6);
+}
+
+.moduleCard:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px rgba(255, 0, 0, 0.8),
+    0 0 25px rgba(255, 0, 0, 0.7);
+}
+
+.moduleTitle {
+  font-size: 1.5rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 996px) {
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textContent {
+    max-width: 100%;
+  }
+
+  .modulesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= ANIMATION ================= */
+@keyframes textGlow {
+  from {
+    text-shadow:
+      0 0 5px #ff0000,
+      0 0 15px #ff0000;
+  }
+  to {
+    text-shadow:
+      0 0 10px #ff0000,
+      0 0 30px #ff0000;
+  }
+}

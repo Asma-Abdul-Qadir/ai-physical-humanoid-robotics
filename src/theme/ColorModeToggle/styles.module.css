@@ -1,0 +1,25 @@
+.colorModeToggle {
+  display: flex;
+  align-items: center;
+}
+
+.colorModeToggle__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: all var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+}
+
+.colorModeToggle__icon {
+  transition: var(--ifm-transition-fast) var(--ifm-transition-timing-default);
+  position: relative;
+}
+
+.colorModeToggle__button:hover .colorModeToggle__icon {
+  transform: rotate(15deg);
+}

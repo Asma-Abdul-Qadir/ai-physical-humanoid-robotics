@@ -1,0 +1,203 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Global styles for Docusaurus
+ * Glassmorphism + Robotics Theme
+ */
+
+/* ===============================
+   INFIMA VARIABLES
+   =============================== */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Navbar variables (dark default) */
+  --navbar-bg: rgba(0, 0, 0, 0.55);
+  --navbar-border: rgba(255, 0, 0, 0.3);
+  --navbar-hover-glow: rgba(255, 0, 0, 0.7);
+}
+
+/* ===============================
+   DARK MODE VARIABLES
+   =============================== */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* ===============================
+   LIGHT MODE VARIABLES
+   =============================== */
+[data-theme='light'] {
+  --navbar-bg: rgba(255, 255, 255, 0.7);
+  --navbar-border: rgba(255, 0, 0, 0.2);
+  --navbar-hover-glow: rgba(255, 0, 0, 0.5);
+}
+
+/* ===============================
+   GLASS CARD (CONTENT)
+   =============================== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+[data-theme='dark'] .glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===============================
+   ROBOTICS CONTENT STYLES
+   =============================== */
+.robotics-diagram {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+/* Code blocks */
+.ros-code-block {
+  background-color: #2d3748;
+  border-left: 4px solid #3182ce;
+}
+
+.gazebo-code-block {
+  background-color: #2d3748;
+  border-left: 4px solid #38a169;
+}
+
+.isaac-code-block {
+  background-color: #2d3748;
+  border-left: 4px solid #e53e3e;
+}
+
+/* ===============================
+   GLASSMORPHISM NAVBAR
+   =============================== */
+.navbar {
+  background: var(--navbar-bg) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border-bottom: 1px solid var(--navbar-border) !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Smooth transitions */
+.navbar__item,
+.navbar__link,
+.navbar__title,
+.navbar__logo {
+  transition: all 0.3s ease !important;
+}
+
+/* ===============================
+   NAVBAR TEXT COLORS (FIX)
+   =============================== */
+
+/* Light mode text */
+[data-theme='light'] .navbar__link,
+[data-theme='light'] .navbar__title {
+  color: #111111 !important;
+  text-shadow: none !important;
+}
+
+/* Dark mode text */
+[data-theme='dark'] .navbar__link,
+[data-theme='dark'] .navbar__title {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+/* ===============================
+   NAVBAR HOVER EFFECTS
+   =============================== */
+.navbar__link:hover,
+.navbar__title:hover {
+  color: #ff0000 !important;
+  transform: scale(1.05);
+}
+
+/* Dark mode glow */
+[data-theme='dark'] .navbar__link:hover,
+[data-theme='dark'] .navbar__title:hover {
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+}
+
+/* Light mode glow */
+[data-theme='light'] .navbar__link:hover,
+[data-theme='light'] .navbar__title:hover {
+  text-shadow: 0 0 4px rgba(255, 0, 0, 0.4);
+}
+
+/* ===============================
+   UNDERLINE ANIMATION
+   =============================== */
+.navbar__item {
+  position: relative;
+}
+
+.navbar__item::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff0000, transparent);
+  transition: width 0.3s ease;
+}
+
+.navbar__item:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   MOBILE MENU
+   =============================== */
+.menu__list-item:hover {
+  background: rgba(255, 0, 0, 0.08) !important;
+  border-radius: 6px;
+}
+
+.menu__link:hover {
+  color: #ff0000 !important;
+  text-shadow: 0 0 6px rgba(255, 0, 0, 0.6);
+}
+
+.navbar-sidebar__brand {
+  background: var(--navbar-bg) !important;
+}
+
+/* ===============================
+   AUTH BUTTON (OPTIONAL)
+   =============================== */
+.custom-auth-button {
+  margin-left: 10px !important;
+}
+
+.custom-auth-button button {
+  transition: all 0.3s ease !important;
+}

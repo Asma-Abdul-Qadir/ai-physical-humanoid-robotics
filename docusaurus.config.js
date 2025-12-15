@@ -56,15 +56,25 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'Physical AI & Humanoid Robotics',
         logo: {
           alt: 'Physical AI Logo',
-          src: 'img/logo.svg',
+          src: 'logo.png',
         },
         items: [
+          {
+            to: '/',
+            label: 'Home',
+            position: 'left'
+          },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
@@ -72,7 +82,27 @@ const config = {
             label: 'Modules',
           },
           {
-            href: 'https://github.com/your-organization/physical-ai-humanoid-robotics-book',
+            to: '/docs/modules/foundations/intro',
+            label: 'Foundations',
+            position: 'left',
+          },
+          {
+            to: '/docs/modules/ros2-urdf/intro',
+            label: 'ROS 2 + URDF',
+            position: 'left',
+          },
+          {
+            to: '/docs/modules/digital-twin/gazebo',
+            label: 'Digital Twin',
+            position: 'left',
+          },
+          {
+            to: '/docs/modules/ai-robot-brain/nav2-navigation',
+            label: 'AI Robot Brain',
+            position: 'left',
+          },
+          {
+            href: 'https://github.com/Asma-Abdul-Qadir/ai-physical-humanoid-robotics',
             label: 'GitHub',
             position: 'right',
           },
@@ -94,11 +124,11 @@ const config = {
               },
               {
                 label: 'Digital Twin',
-                to: '/docs/modules/digital-twin/intro',
+                to: '/docs/modules/digital-twin/gazebo',
               },
               {
                 label: 'AI Robot Brain',
-                to: '/docs/modules/ai-robot-brain/intro',
+                to: '/docs/modules/ai-robot-brain/nav2-navigation',
               },
             ],
           },
