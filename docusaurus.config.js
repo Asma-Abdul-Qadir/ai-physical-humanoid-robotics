@@ -16,6 +16,8 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages: https://<USERNAME>.github.io/<REPO>/
   baseUrl: '/physical-ai-humanoid-robotics-book/',
+  + url: 'https://ai-physical-humanoid-robotics.vercel.app/',
+  + baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
