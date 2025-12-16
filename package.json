@@ -11,6 +11,7 @@
     "deploy": "docusaurus deploy",
     "build:github": "cross-env DEPLOYMENT_TARGET=github npm run build",
     "build:vercel": "cross-env DEPLOYMENT_TARGET=vercel npm run build",
+    "vercel-build": "cross-env DEPLOYMENT_TARGET=vercel npm run build",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",

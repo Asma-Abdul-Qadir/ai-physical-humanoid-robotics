@@ -12,12 +12,12 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: process.env.DEPLOYMENT_TARGET === 'vercel'
+  url: process.env.DEPLOYMENT_TARGET === 'vercel' || process.env.VERCEL === '1'
     ? 'https://ai-physical-humanoid-robotics.vercel.app'
     : 'https://asma-abdul-qadir.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages: https://<USERNAME>.github.io/<REPO>/
-  baseUrl: process.env.DEPLOYMENT_TARGET === 'vercel'
+  baseUrl: process.env.DEPLOYMENT_TARGET === 'vercel' || process.env.VERCEL === '1'
     ? '/'
     : '/physical-ai-humanoid-robotics-book/',
 
