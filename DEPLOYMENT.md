@@ -28,6 +28,7 @@ The project is configured for Vercel deployment.
 2. Import your GitHub repository
 3. In the project settings, set the build command to: `npm run build:vercel`
 4. Set the output directory to: `build`
+5. Vercel will automatically use the vercel.json configuration for clean URLs
 
 ### Environment Variables
 - No special environment variables are needed for Vercel deployment
