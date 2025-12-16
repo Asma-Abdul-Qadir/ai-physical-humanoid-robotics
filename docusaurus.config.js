@@ -12,14 +12,18 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: process.env.DEPLOYMENT_TARGET === 'vercel'
+    ? 'https://ai-physical-humanoid-robotics.vercel.app'
+    : 'https://asma-abdul-qadir.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages: https://<USERNAME>.github.io/<REPO>/
-  baseUrl: '/physical-ai-humanoid-robotics-book/',
+  baseUrl: process.env.DEPLOYMENT_TARGET === 'vercel'
+    ? '/'
+    : '/physical-ai-humanoid-robotics-book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-organization', // Usually your GitHub org/user name.
+  organizationName: 'Asma-Abdul-Qadir', // Usually your GitHub org/user name.
   projectName: 'physical-ai-humanoid-robotics-book', // Usually your repo name.
 
   onBrokenLinks: 'warn',
